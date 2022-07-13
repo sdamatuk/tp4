@@ -1,0 +1,334 @@
+/* paleta de colores de Coolors
+"Fuchsia Crayola":  #B360B3 ,
+"Lilac":            #D3A6D3 ,
+"Pale Purple Pantone": #EAD5EA ,
+"Black":            #000000
+*/
+
+*{
+    margin: 0 ; 
+    padding: 0 ; 
+    box-sizing: border-box;
+    border: 0;
+} 
+
+body{
+    background-color: #000000 ;
+    font-family: 'Nunito' , sans-serif ;
+}
+
+a {
+    text-decoration: none ;
+}
+
+header{
+    background-color:#B360B3 ; 
+    color:#FFF ; 
+    position: sticky ;
+    top: 0 ;
+    z-index: 9999 ;
+}
+
+
+
+.nav-links {
+    display: flex ;
+    gap: 30px   ;
+    list-style: none;
+}
+
+.nav-links a{
+    color: #FFF ;
+}
+
+
+.nav-links a:hover{
+    color: #B360B3   ;
+    background-color: antiquewhite;
+}
+
+#banner {
+    background-image: url('../img/consultor2.jpg');
+    background-size: cover;
+    background-position: center ;
+    height : 400px ;
+    box-shadow: inset 0px 0px 102px -17px #EDD2EF;
+/* falta ajustar el tamaño de la imagen para que sea responsive  */
+}
+
+
+#banner2 {
+    background-image: url('../img/learn-future.jpg');
+    background-size: cover;
+    background-position: top;
+    height : 400px ;
+    box-shadow: inset 0px 0px 102px -17px #EDD2EF;
+/* falta ajustar el tamaño de la imagen para que sea responsive  */
+}
+
+
+.d-flex {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-banner {
+    margin: 0;
+    text-align: center;
+    padding: 0px , 100px;
+}
+
+.card-banner h1{
+    color: #FFF;
+    font-size: 4vw;
+}
+
+
+.card-banner h2{
+    margin-bottom: 20px;
+    color: #FFF;
+    font-size: 2vw;
+}
+
+#menu-home{
+    text-align: center;
+}
+
+#menu-home h2{
+    margin: 30px 0px;
+}
+
+
+/* .consultora-grid:hover , .consultora-grid2:hover ,  */
+/* .consultora-item img {
+    opacity:0.3;
+} */
+
+/* .consultora-item a ,  */
+/* .consultora-item img {
+    z-index: 0;
+    opacity: 30%;
+} */
+
+/* .consultora-item div p , .consultora-item div {
+    z-index: 2;
+    opacity: 100%;
+} */
+
+/* For mobile phones: */
+    .consultora-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4,1fr);
+        justify-items: center;
+        row-gap: 50px;
+    }
+
+    .consultora-grid2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6,1fr);
+        justify-items: center;
+        row-gap: 50px;
+    }
+
+
+    .consultora-item{
+        border-radius: 20px;
+        overflow: hidden;
+        width: 200px;
+        height: 300px;
+        /* width: 60vw ; 
+        height: 96vw; */
+        font-size: 20px;
+        cursor: pointer; 
+    }
+
+    .consultora-item img{
+        width: 200px;
+        height: 300px;
+        /*indica como el contenido de img deberia redimensionarse 
+        para ajustarse a su contenedor*/
+        object-fit: cover;
+    }
+
+    nav{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50px ;
+        align-items: center;
+        padding: 0px 50px ;
+}
+  
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .consultora-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-items: center;
+        row-gap: 50px;
+        }
+
+        .consultora-grid2{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4,1fr);
+            justify-items: center;
+            row-gap: 50px;
+            }
+    
+        
+        .consultora-item{
+            border-radius: 20px;
+            overflow: hidden;
+            width: 200px;
+            height: 300px;
+            font-size: 20px;
+            cursor: pointer; 
+        }
+        
+        .consultora-item img{
+            width: 200px;
+            height: 300px;
+            /*indica como el contenido de img deberia redimensionarse 
+            para ajustarse a su contenedor*/
+            object-fit: cover;
+        }
+
+        nav{
+            display: flex ;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 50px ;
+            align-items: center;
+            padding: 0px 50px ;
+        }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+  .consultora-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    justify-items: center;
+    row-gap: 50px;
+    }
+
+    .consultora-grid2{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3,1fr);
+        justify-items: center;
+        row-gap: 50px;
+        }
+    
+
+    .consultora-item{
+        border-radius: 20px;
+        overflow: hidden;
+        width: 200px;
+        height: 300px;
+        font-size: 20px;
+        cursor: pointer; 
+    }
+    
+    .consultora-item img{
+        width: 200px;
+        height: 300px;
+        /*indica como el contenido de img deberia redimensionarse 
+        para ajustarse a su contenedor*/
+        object-fit: cover;
+    }
+
+    nav{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 50px ;
+        align-items: center;
+        padding: 0px 50px ;
+    }
+}
+
+/*Transformaciones para escalar */
+/* .consultora-grid:hover , .consultora-grid2:hover ,  */
+.consultora-item:hover  {
+    transform:scale(1.2) ; 
+/*Como queremos que se aplique la transformacion de escala */
+    transform-origin:center center;
+    opacity:1 ;
+    transition: 500ms all;
+}
+
+.btn-ing{
+    color:#EDD2EF;
+}
+
+.btn-ing:hover{
+    color: rgb(255, 0, 43);
+}
+
+
+.consultora-item , .consultora-item-detalle {
+    color: white;
+    /* align-items: flex-start;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); */
+    /* para crear una capa de overlay */
+    /* position: relative  ;
+    left: 0;
+    bottom: 0;
+    right: 0;  */
+    /* Para los elementos con una posicion absoluta
+    determina la distancia entre el borde superior del elemento y
+    el borde superior del bloque que lo contiene.  */
+    /* top: 10 ;
+    display:flex ; */
+    font-size: 20px;
+    /* flex-direction: column;
+    justify-content: center  ; */
+    opacity: 30%; 
+    padding: 10px;
+    z-index: 4;
+}
+
+.consultora-item:hover , .consultora-item-detalle:hover {
+    opacity: 1 ;
+    transition: 500ms ;
+} 
+
+.consultora-item-detalle-titulo {
+    color: white;
+    /* margin: 5px, 0px, 0px , 0px; */
+}
+
+.consultora-item-detalle-subtitulo {
+    color:white;
+    font-size: 8px;
+    margin: 3px, 0px ;
+}
+
+
+.consultora-parrafo{
+    padding: 40px ;
+}
+
+.consultora-parrafo-detalle-titulo{
+    font-size: 40px;
+    color: #EAD5EA ;
+}
+
+.consultora-parrafo-detalle-texto{
+    font-size: 25px; 
+    color: #EAD5EA ;
+}
+
